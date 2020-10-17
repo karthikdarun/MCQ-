@@ -1,0 +1,12 @@
+*** Variables ***
+${SystemMapping_loc}    xpath:(//a[contains(.,'System Mapping')])[1]
+${RoleMapping_loc}    xpath://a[contains(.,'Role Mapping')]    
+${SelectProject_loc}    xpath://select[@id='DdlRoleSetUpProject']
+${SelectRole_loc}    xpath://select[@id='DdlRoleSetUpUserRole']
+${Searchbutton_loc}    xpath://button[@id='btnLoginUserSearch']
+${ClearButton_loc}    xpath://button[@id='btnLoginUserClear']
+${AvailUsers_loc}    xpath://select[@id='lstUnSelectedUserID']
+${SelectedUsers_loc}    xpath://select[@id='lstSelectedUserID']
+${buttonRight_loc}    xpath:(//button[@id='btnright'])[1]
+${UpdateButton_loc}    xpath://button[@id='btnLoginUserUpdate']
+${YesButton_loc}    xpath:(//div[@class='jconfirm-buttons']/button)[1]   
