@@ -112,12 +112,36 @@ Add exam Verify it
        
     Click Element    ${ExamSetupDetails_Menu}
     Sleep    ${MaxTimeout}
-    Input Text    ${ExamSearchExamName_loc}    @{ExamName_data}[${index}]
+    Input Text    ${ExamSearchExamName_loc}    ${ExamName_data}[${index}]
     Click Element    ${ExamSearchButton}    
     Sleep    ${MinTimeout}
     Element Text Should Be    ${ExamLastActionStatus_loc}    ${ExamLastActionStatus_data}[${index}]
     END 
     
-Provide Access for users                                              
-        Click Element    ${ExamUSerAccess_Menu}    
+Provide Access for users 
+        FOR    ${index}    IN RANGE    0    4                                             
+        Input Text    ${ExamNameInUserAcess_loc}    ${ExamName_data}[${index}]
+        Click Element    ${ExamSearchButton}    
+        Sleep    ${MinTimeout} 
+        Click Element    ${ExamNameInGrid_loc}    
+        Sleep    ${MinTimeout}
+        Wait Until Element Is Visible    ${SelectExamMode_loc}    
+        Select From List By Label    ${SelectExamMode_loc}    ${SelectExamMode_data}[${index}]
+        Select From List By Label    ${SelectBatchYear_loc}    ${SelectBatchYear_data}[${index}]
+        Select From List By Label    ${SelecteducationLevel_loc}    ${SelecteducationLevel_data}[${index}]
+        Select From List By Label    ${SelectGroupName_loc}    ${SelectGroupName_data}[${index}] 
+        Select From List By Label    ${SelectAvailableuser_loc}    ${SelectAvailableuser_data}[${index}]    
+        Sleep    ${MinTimeout}    
+        Click Element    ${Rightbutton}
+        
+        Execute Javascript    window.scrollBy(900, 900)
+        Sleep    ${MinTimeout}    
+        Click Element    ${ExamUserAccessUpdate}    
+        Click Element    ${YesButton_loc}
+        Sleep    ${MinTimeout}
+        Element Text Should Be    ${VerifySelectedUser_loc}    ${SelectAvailableuser_data}[${index}] 
+        Sleep    ${MinTimeout}    
+        Click Element    ${ExamUSerAccessClear}    
+        END                            
+           
         

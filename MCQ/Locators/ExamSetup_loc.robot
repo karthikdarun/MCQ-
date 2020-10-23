@@ -1,5 +1,4 @@
-*** Settings ***
-Library    SeleniumLibrary    
+  
 
 *** Variables ***
 ${ExamSetupAddButton}    xpath://*[@id='btnExamdetailAdd']
@@ -60,6 +59,8 @@ ${ExamNameInGrid_loc}    xpath://*[@id='ExamMasterGrid']/tbody/tr/td[6]
 ${ExamLastActionStatus_loc}    xpath://*[@id='ExamMasterGrid']/tbody/tr/td[13]
 
 ###########################################Exam user access######################
+${ExamUSerAccessClear}    xpath://*[@id='btnExamSearchClear']
+${ExamNameInUserAcess_loc}    xpath://*[@id='txtExamsearchExamName']
 ${UseraccessExamRecord}    xpath://*[@id='ExamMasterGrid']/tbody/tr/td[2]
 ${SelectExamMode_loc}    xpath://*[@id='DdlExamMasterExamMode']
 ${SelectBatchYear_loc}    xpath://*[@id='DdllExamUserBatchYear']

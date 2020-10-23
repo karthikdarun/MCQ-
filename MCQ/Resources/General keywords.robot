@@ -38,16 +38,49 @@ Login into the application as Teacher
 Navigate to Role matrix Page
     Click Element    ${SystemMappingMenu}    
     Click Element    ${RoleMatrixMenu}
+    Sleep    ${timeout}    
     
+Navigate to Exam user master
+    Click Element    ${ExamMasterMenu}
+    Click Element    ${ExamUserMasterMenu}
+    Sleep    ${timeout}    
+    
+Navigate to Role Mapping screen
+    Click Element    ${SystemMappingMenu}
+    Click Element    ${RoleMappingMenu}
+    Sleep    ${timeout}
+    
+Navigate to System Mapping screen
+    Click Element    ${SystemMappingMenu}
+    Click Element    ${SystemMappinSubMenu}
+    Sleep    ${timeout}    
+    
+Navigate to Default Master screen
+    Click Element    ${SystemMaster_Menu}
+    Click Element    ${DefaultMaster_Menu}
+    Sleep    ${timeout}    
+    
+Navigate to Default Master Mapping
+    Click Element    ${SystemMappingMenu}
+    Click Element    ${DefaultMasterMappingMenu}
+    Sleep    ${timeout}                        
+    
+
 Navigate to Exam Setup screen
     Click Element    ${ExamSetup_Menu}
-    Click Element    ${ExamSetupDetails_Menu}    
+    Click Element    ${ExamSetupDetails_Menu}
+    Sleep    ${timeout}
     
-
-
-# Close the application 
-    # Wait Until Element Is Visible    ${Logout_user}    
-    # Click Element    ${Logout_user} 
+Navigate to Exam User Access screen
+    # Click Element    ${ExamSetup_Menu} 
     # Sleep    ${timeout}   
-    # Click Element    ${Logout_button}      
-    # Close Browser   
+    Click Element    ${ExamUSerAccess_Menu}
+    Sleep    ${timeout}   
+
+
+logout from the application 
+    Wait Until Element Is Visible    ${Logout_user}    
+    Click Element    ${Logout_user} 
+    Sleep    ${timeout}   
+    Click Element    ${Logout_button}      
+    Close Browser   

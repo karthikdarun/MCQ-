@@ -5,11 +5,7 @@ Resource    ../TestData/RoleMapping_Data.robot
 
 *** Keywords ***
 
-Navigate to Role Mapping screen
-    Click Element    ${SystemMapping_loc}    
-    Sleep    ${Timeout}
-    Click Element    ${RoleMapping_loc}  
-    Sleep    ${Timeout}
+
     
 Map the users for the Roles and verify it
     FOR    ${index}    IN RANGE    0    4

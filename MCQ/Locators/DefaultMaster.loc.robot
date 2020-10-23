@@ -1,0 +1,13 @@
+*** Variables ***
+${BatchYear_loc}    xpath://div[contains(text(),'Batch Year')]
+${TaskPriority_loc}    xpath://div[contains(text(),'Task Priority')]
+${Complexity_loc}    xpath://div[contains(text(),'Complexity')]
+${TaskCategory_loc}    xpath://div[contains(text(),'Task Category')]
+${Level_loc}    xpath://div[contains(text(),'Level')]
+${btnAddDefaultDetail}    xpath://*[@id='btnAddDefaultDetail']
+${txtDefaultTextField_loc}    xpath://*[@id='txtDefaultTextField']
+${txtDefaultOrderBy_loc}    xpath://*[@id='txtDefaultOrderBy']
+${ddlDefaultColorCode_loc}    xpath://*[@id='ddlDefaultColorCode']
+${SaveDefaultMasterDetails}    xpath://*[@id='btnSaveDefaultDetail']
+${txtSearchDefaultType_loc}    xpath://*[@id='txtSearchDefaultType']
+${SearchbnDefaultMaster}    xpath://*[@id='btnDefaultHeaderSearch']

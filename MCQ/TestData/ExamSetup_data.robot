@@ -2,7 +2,7 @@
 ${MinTimeout}    2
 ${MaxTimeout}    4
 @{Examcode_data}    Exam_128    Exam_129    Exam_130    Exam_131
-@{ExamName_data}    Revision Test6    Revision Test7    Revision Test8    Revision Test9
+@{ExamName_data}    Revision Test4    Revision Test7    Revision Test8    Revision Test9
 @{ExamType_data}    OnLine    OnLine    OnLine    OnLine
 @{Examdate_data}    17-Oct-2020    17-Oct-2020    19-Oct-2020    19-Oct-2020
 @{TotalMarks_data}    100    100    100    100    
@@ -37,10 +37,10 @@ ${MaxTimeout}    4
 
 #####ExamUSerAccess############
     
-${SelectExamMode_loc}    Online    Online    Online    Online    
-${SelectBatchYear_loc}    2020    2020    2020    2020    
-${SelecteducationLevel_loc}    Primary One    Primary One    Primary One    Primary One    
-${SelectGroupName_loc}    Group A    Group A    Group A     Group A   
-${SelectAvailableuser_loc}    StudentName    StudentName    StudentName    StudentName    
-${VerifySelectedUser_loc}    StudentName    StudentName    StudentName    StudentName        
+@{SelectExamMode_data}    Online    Online    Online    Online    
+@{SelectBatchYear_data}    2020    2020    2020    2020    
+@{SelecteducationLevel_data}    Primary One    Primary One    Primary One    Primary One    
+@{SelectGroupName_data}    Group A    Group A    Group A     Group A   
+@{SelectAvailableuser_data}    student 123    student 123    student 1234    student 1234    
+@{VerifySelectedUser_data}    student 123    student 123    student 1234    student 1234        
         

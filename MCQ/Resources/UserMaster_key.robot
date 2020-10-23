@@ -1,3 +1,5 @@
+
+
 *** Settings ***
 Library    SeleniumLibrary    
 Resource    ../TestData/UserMaster_data.robot
@@ -36,8 +38,8 @@ Create and Verify the users
     Click Element    ${A_DisplayAlert_click}    
     Sleep    ${timeout}
     Mouse Down    ${A_DisplayAlert_select}
-    Click Element    ${A_DisplayAlert_select}
-    Sleep    ${timeout}    
+    Sleep    ${timeout}
+    Click Element    ${A_DisplayAlert_select}        
     
     Click Element    ${Save_button}
     Click Element    ${Accept_button}
