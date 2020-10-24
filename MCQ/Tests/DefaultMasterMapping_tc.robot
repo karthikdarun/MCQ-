@@ -7,7 +7,7 @@ Resource    ../Resources/DefaultMasterMapping_key.robot
 Map Default types to Admin & Teacher
     Login into the application as Admin
     Navigate to Default Master Mapping 
-    Map the default types for Admin and verify it
-    # Map the default types for Teacher and verify it
+    # Map the default types for Admin and verify it
+    Map the default types for Teacher and verify it
     Logout from the application
     

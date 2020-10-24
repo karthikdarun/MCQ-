@@ -5,3 +5,4 @@ ${lstUnSelectedDefaultType_loc}    xpath://*[@id='lstUnSelectedDefaultType']
 ${lstSelectedDefaultType_loc}    xpath://*[@id='lstSelectedDefaultType']
 ${btnDefaultTypeUpdate}    xpath://*[@id='btnDefaultTypeUpdate']
 ${btnDefaultTypeClear}    xpath://*[@id='btnDefaultTypeClear']
+${SelectedList_All}    xpath://*[@id='lstSelectedDefaultType']/option

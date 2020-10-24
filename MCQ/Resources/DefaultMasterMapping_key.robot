@@ -1,5 +1,6 @@
 *** Settings ***
-Library    SeleniumLibrary 
+Library    SeleniumLibrary
+Library    Collections     
 Resource    ../Locators/General Locators.robot
 Resource    ../Locators/DefaultMasterMapping_loc.robot
 Resource    ../TestData/DefaultMasterMapping_data.robot
@@ -13,12 +14,17 @@ Map the default types for Admin and verify it
     Click Element    ${Rightbutton}    
     Click Element    ${btnDefaultTypeUpdate} 
     Click Element    ${YesButton}
-    ${listele}=    Get WebElements    xpath://*[@id='lstSelectedDefaultType']/option
-    FOR    ${i}    IN    @{listele}
-    ${Values}=    Get Text    ${i} 
-           
-    Element Text Should Be    ${lstSelectedDefaultType_loc}    @{AdminSelectedDefaultType_data}        
-       
+    
+      
+         
+    ${listele}=    Get WebElements    ${SelectedList_All}
+     
+    FOR    ${i}    IN RANGE    0    9
+    ${Values}=    Get Text    ${listele}[${i}]
+    Log To Console    ${Values}
+    ${expected_text}=    Get From List    ${AdminSelectedDefaultType_data}    ${i}
+    Log To Console    ${expected_text}
+    Should Be Equal    ${expected_text}    ${Values}       
     END    
     
     
@@ -31,5 +37,13 @@ Map the default types for Teacher and verify it
     Click Element    ${Rightbutton}    
     Click Element    ${btnDefaultTypeUpdate} 
     Click Element    ${YesButton}       
-    Element Text Should Be    ${lstSelectedDefaultType_loc}    @{TeacherSelectedDefaultType_data}    
-    Sleep    ${timeout}  
+    
+    ${listele1}=    Get WebElements    ${SelectedList_All}
+     
+    FOR    ${i}    IN RANGE    0    9
+    ${Teacher_ActualValues}=    Get Text    ${listele1}[${i}]
+    Log To Console    ${Teacher_ActualValues}
+    ${Expected_Values}=    Get From List    ${TeacherSelectedDefaultType_data}    ${i}
+    Log To Console    ${Expected_Values}
+    Should Be Equal    ${Expected_Values}    ${Teacher_ActualValues}       
+    END  
