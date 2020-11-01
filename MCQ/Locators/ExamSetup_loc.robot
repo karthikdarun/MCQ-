@@ -1,4 +1,6 @@
-  
+*** Settings ***
+Library    SeleniumLibrary    
+Resource    ../Resources/ExamSetup_key.robot
 
 *** Variables ***
 ${ExamSetupAddButton}    xpath://*[@id='btnExamdetailAdd']
@@ -6,7 +8,9 @@ ${Examcode_loc}    xpath://*[@id='txtExamMasterExamCode']
 ${ExamName_loc}    xpath://*[@id='txtExamMasterExamName']
 ${ExamType_loc}    xpath://*[@id='DdlExamMasterExamType']
 ${ExamdateRadioButton_loc}    xpath://*[@id='AutoDate']
-${Examdate_loc}    xpath://*[@id='txtExamMasterExamDate']
+${Examdatepicker_loc}    xpath:(//*[@id='ExamMasterdialog']//descendant::span)[3]
+# ${CurrentDate_loc}    xpath://td[@day='${day}']
+
 ${TotalMarks_loc}    xpath://*[@id='txtExamMasterTotalMarks']
 ${PassMarks_loc}    xpath://*[@id='txtExamMasterPassMarks']
 ${ExamGrade_loc}    xpath://*[@id='DdlExamMasterExamGrade']
@@ -69,6 +73,20 @@ ${SelectGroupName_loc}    xpath://*[@id='DdlExamUserMasterGroupName']
 ${SelectAvailableuser_loc}    xpath://*[@id='lstExamUserUnSelectedUsers']
 ${VerifySelectedUser_loc}    xpath://*[@id='lstExamUserSelectedUsers']
 ${ExamUserAccessUpdate}    xpath://*[@id='btnExamUserLevelUpdate']
+
+################Verifier#########################
+${ExamForVerification}    xpath://*[contains(text(),'Exam For Verification')]
+${VerifyButtonIn verifier}    xpath://div[@title='Verify']
+${SelectAction_loc}    xpath://*[@id='DdlWorkflowRole']
+${Verify/approveDescription_loc}    xpath://*[@id='txtDescription']
+${Verify/ApproveSubmit}    xpath://*[@id='btnWorkflowSubmit']
+
+################Approver##############################
+
+${ExamForApprover}    xpath://*[contains(text(),'Exam For Approval')]
+${ApproveButtonIn Approver}    xpath://*[@title='Approve']
+
+
 
 
 

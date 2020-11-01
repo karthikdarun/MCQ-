@@ -75,6 +75,26 @@ Navigate to Exam User Access screen
     # Click Element    ${ExamSetup_Menu} 
     # Sleep    ${timeout}   
     Click Element    ${ExamUSerAccess_Menu}
+    Sleep    ${timeout}
+    
+Login into the application as Verifier
+    Open browser    ${Server url}    chrome
+    Maximize Browser Window
+    Set Browser Implicit Wait    15
+    Input Text    ${LoginUsernameTextbox}    ${Verifier Username}
+    Input Password    ${LoginPasswordTextbox}    ${Verifier Password}
+    Sleep    ${timeout}    
+    Click Button    ${login_Button}
+    Sleep    ${timeout}
+    
+Login into the application as Approver
+    Open browser    ${Server url}    chrome
+    Maximize Browser Window
+    Set Browser Implicit Wait    15
+    Input Text    ${LoginUsernameTextbox}    ${Approver Username}
+    Input Password    ${LoginPasswordTextbox}    ${Approver Password}
+    Sleep    ${timeout}    
+    Click Button    ${login_Button}
     Sleep    ${timeout}   
 
 

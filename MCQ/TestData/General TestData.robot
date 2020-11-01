@@ -6,3 +6,8 @@ ${Admin Username}    admin_001
 ${Admin Password}    Admin_001@123
 ${Teacher username}    teacher_001
 ${Teacher Password}    Teacher_001@123
+${Verifier Username}    verifier_001
+${Verifier Password}    Verifier_001@12
+${Approver Username}    approver_001
+${Approver Password}    Approver_001@12
+    
