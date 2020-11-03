@@ -4,7 +4,7 @@ Resource    ../Locators/General Locators.robot
 Resource    General keywords.robot
 Resource    ../TestData/General TestData.robot
 Resource    ../TestData/ExamModeMaster_data.robot
-Resource    ../Locators/ExamModeMaster.loc.robot
+Resource    ../Locators/ExamModeMaster_loc.robot
 
 *** Keywords ***
  Navigate to Exam Mode Master screen

@@ -7,6 +7,3 @@ ${DescExamMode_loc}    xpath://*[@id='txtExamModeDescription']
 ${SaveExamMode}    xpath://*[@id='btnSaveExamMode']
 ${SearchExamModeButton}    xpath://*[@id='btnExamModeSearch']
 ${VerifyExamMode_loc}    xpath://*[@id='ExamModegrid']/tbody/tr/td[2]
-
-
-

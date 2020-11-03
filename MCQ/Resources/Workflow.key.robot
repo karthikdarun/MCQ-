@@ -2,7 +2,7 @@
 Library    SeleniumLibrary    
 Resource    ../Locators/General Locators.robot
 Resource    ../TestData/General TestData.robot
-Resource    ../Locators/WorkFlow.loc.robot
+Resource    ../Locators/WorkFlow_loc.robot
 Resource    ../TestData/Workflow.data.robot
 
 *** Keywords ***
@@ -29,9 +29,9 @@ Add Workflow and verify it
     Select From List By Label    ${SelectWorkFlowUser_loc}    ${SelectWorkFlowUser_data}[${index}]
     Select From List By Label    ${Selectworkflowrole_loc}    ${Selectworkflowrole_data}[${index}]
     Click Element    ${SelectWorkflowAction_loc}
-    Mouse Down    ${ClickWorkflowAction}
+    # Mouse Down    ${ClickWorkflowAction}
     Sleep    ${timeout}
-    Click Element    ${ClickWorkflowAction}    
+    # Click Element    ${ClickWorkflowAction}    
     Select From List By Label    ${Selectworkflowdisplayaction_loc}    ${Selectworkflowdisplayaction_data}[${index}]
     Input Text    ${WorkflowOrder_loc}    ${WorkflowOrder_data}[${index}]    
     Input Text    ${WorkflowactionMessage_loc}    ${WorkflowactionMessage_data}[${index}]

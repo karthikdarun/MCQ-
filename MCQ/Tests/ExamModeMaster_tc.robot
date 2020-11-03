@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../Resources/General keywords.robot
-Resource    ../Resources/ExamModeMaster.key.robot
+Resource    ../Resources/ExamModeMaster_key.robot
 
 
 *** Test Cases ***

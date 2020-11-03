@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../Resources/General keywords.robot
 Resource    ../TestData/General TestData.robot
-Resource    ../Resources/GradeMaster.key.robot
+Resource    ../Resources/GradeMaster_key.robot
 
 
 
