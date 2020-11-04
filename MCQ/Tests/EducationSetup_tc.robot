@@ -1,5 +1,6 @@
 *** Settings ***
 Resource    ../Resources/General keywords.robot
+Resource    ../Resources/EducationSetup_key.robot
 
 
 

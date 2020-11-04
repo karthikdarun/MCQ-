@@ -33,7 +33,7 @@ ${SelectLecturerRadiobn}    xpath://*[@id='radioTeachersID']
 ${Submitbutton}    xpath://*[@id='btnTeachersSetUpSubmit']
 ${SelectSubjectList_loc}    xpath:(//*[@id='GridLecturerLevelSetup']//child::select)[1]
 ${UpdateLecturersetupbn}    xpath://span[contains(text(),'Update')]
-${VerifySubjectName_loc}    xpath:(//*[@id='GridLecturerLevelSetup']//child::select)[1]
-${VerifyLecturerName_loc}    xpath://input[@id='txtTeachername_2']    
+${VerifySubjectName_loc}    xpath://*[@id='GridLecturerLevelSetup']/tbody/tr/td[1]
+${VerifyLecturerName_loc}    xpath://*[@id='GridLecturerLevelSetup']/tbody/tr/td[2]   
 
 

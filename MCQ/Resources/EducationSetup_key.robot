@@ -18,12 +18,13 @@ Perform Subject level setup and verify it
     Input Text    ${InputSubjectDesc_loc}    ${InputSubjectDesc_data}    
     Click Element    ${SaveSubjectbn}    
     Click Element    ${YesButton}
-    Input Text    ${SearchSubCode_loc}    ${SearchSubCode_data}    
+    Input Text    ${SearchSubCode_loc}    ${SearchSubCode_data}
+    Sleep    ${timeout}    
     Click Element    ${SearchSubjectbn}    
     Sleep    ${timeout}
     Element Text Should Be    ${VerifySubCode_loc}    ${VerifySubCode_data}    
     Sleep    ${timeout}    
-    Element Text Should Be    ${VerifySubjectName_loc}    ${VerifySubjectName_data}    
+       
     Click Element    ${VerifySubCode_loc}    
     Sleep    ${timeout}
     
@@ -57,6 +58,29 @@ Perform Subject level setup and verify it
         
 
 Navigate to Subject lecturer level setup
-    
+    Click Element    ${SubjectlecturerLevelSetup_menu}    
+    Sleep    ${timeout}
+       
 
 Map subject with lecturer/teacher and verify it
+    Select From List By Label    ${SelectBatchYear_loc}    ${SelectBatchYear_data}
+    Select From List By Label    ${SelectExamLevel_loc}    ${SelectExamLevel_data}
+    Sleep    ${timeout}
+    Click Element    ${SearchTeacherbn}
+    Sleep    ${timeout}
+    Click Element    ${AddLecturerlevelSetup}
+    Click Element    ${EditLecturerlevelSetup}    
+    Click Element    ${LecturerList_loc}
+    Input Text    ${InputLecturerName_loc}    ${InputLecturerName_data} 
+    Sleep    ${timeout}   
+    Click Element    ${SearchLecturerbn}
+    Sleep    ${timeout} 
+    Click Element    ${SelectLecturerRadiobn}
+    Click Element    ${Submitbutton}
+    Select From List By Label    ${SelectSubjectList_loc}    ${SelectSubjectList_data}
+    Click Element    ${UpdateLecturersetupbn}
+    Click Element    ${YesButton}    
+    Sleep    ${timeout}
+    Element Text Should Be    ${VerifySubjectName_loc}    ${VerifySubjectName_data}
+    Sleep    ${timeout} 
+    Element Text Should Be    ${VerifyLecturerName_loc}    ${VerifyLecturerName_data}                                           

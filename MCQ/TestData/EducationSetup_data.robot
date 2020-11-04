@@ -1,12 +1,12 @@
 *** Variables ***
 
    
-${InputSubjectCode_data}    AA_001
-${InputSubjName_data}    AABC    
+${InputSubjectCode_data}    AA_002
+${InputSubjName_data}    AABCD    
 ${InputSubjectDesc_data}    ABC        
-    
-${VerifySubCode_data}    AA_001        
-${SearchSubCode_data}    AA_001    
+${SelectSubjectList_data}    AABCD       
+${VerifySubCode_data}    AA_002        
+${SearchSubCode_data}    AA_002    
     
     
 ${InputModuleName_data}    Birds    
@@ -25,5 +25,5 @@ ${VerifyObj_data}    Testing
 ${SelectBatchYear_data}    2020    
 ${SelectExamLevel_data}    Primary level    
 ${InputLecturerName_data}    Teacher_001       
-${VerifySubjectName_data}    AABC    
+${VerifySubjectName_data}    AABCD    
 ${VerifyLecturerName_data}    Teacher_001         
