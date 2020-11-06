@@ -35,6 +35,16 @@ Login into the application as Teacher
     Click Button    ${login_Button}
     Sleep    ${timeout} 
     
+Login into the application as Student
+    Open browser    ${Server url}    chrome
+    Maximize Browser Window
+    Set Browser Implicit Wait    15
+    Input Text    ${LoginUsernameTextbox}    ${Student Username}
+    Input Password    ${LoginPasswordTextbox}    ${Student Password}
+    Sleep    ${timeout}    
+    Click Button    ${login_Button}
+    Sleep    ${timeout} 
+    
 Navigate to Role matrix Page
     Click Element    ${SystemMappingMenu}    
     Click Element    ${RoleMatrixMenu}

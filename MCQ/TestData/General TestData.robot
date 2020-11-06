@@ -10,4 +10,5 @@ ${Verifier Username}    verifier_001
 ${Verifier Password}    Verifier_001@12
 ${Approver Username}    approver_001
 ${Approver Password}    Approver_001@12
-    
+${Student username}    student10 
+${Student Password}    Student!1   

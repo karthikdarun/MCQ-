@@ -274,13 +274,13 @@ Provide Menu and Page access for Teacher
     Sleep    ${Timeout} 
     
     
-    Click Element    ${PageAccessButton_2} 
-    Sleep    ${Timeout}    
-    Select All From List    ${CommonListBox_loc}
-    Click Element    ${btnright_loc}    
-    Click Element    ${updatebutton_loc} 
-    Click Element    ${RoleMatrixYesBn}       
-    Sleep    ${Timeout}
+    # Click Element    ${PageAccessButton_2} 
+    # Sleep    ${Timeout}    
+    # Select All From List    ${CommonListBox_loc}
+    # Click Element    ${btnright_loc}    
+    # Click Element    ${updatebutton_loc} 
+    # Click Element    ${RoleMatrixYesBn}       
+    # Sleep    ${Timeout}
     
     Click Element    ${PageAccessButton_4} 
     Sleep    ${Timeout}    
@@ -624,36 +624,36 @@ Provide Menu and Page access for Student
     Sleep    ${Timeout}
     
     
-    Click Element    ${PageAccessButton_2} 
-    Sleep    ${Timeout}    
-    Select All From List    ${CommonListBox_loc}
-    Click Element    ${btnright_loc}    
-    Click Element    ${updatebutton_loc} 
-    Click Element    ${RoleMatrixYesBn}       
-    Sleep    ${Timeout}
+    # Click Element    ${PageAccessButton_2} 
+    # Sleep    ${Timeout}    
+    # Select All From List    ${CommonListBox_loc}
+    # Click Element    ${btnright_loc}    
+    # Click Element    ${updatebutton_loc} 
+    # Click Element    ${RoleMatrixYesBn}       
+    # Sleep    ${Timeout}
     
-    Click Element    ${PageAccessButton_4} 
-    Sleep    ${Timeout}    
-    Select All From List    ${CommonListBox_loc}
-    Click Element    ${btnright_loc}    
-    Click Element    ${updatebutton_loc} 
-    Click Element    ${RoleMatrixYesBn}       
-    Sleep    ${Timeout}
+    # Click Element    ${PageAccessButton_4} 
+    # Sleep    ${Timeout}    
+    # Select All From List    ${CommonListBox_loc}
+    # Click Element    ${btnright_loc}    
+    # Click Element    ${updatebutton_loc} 
+    # Click Element    ${RoleMatrixYesBn}       
+    # Sleep    ${Timeout}
     
-    Click Element    ${PageAccessButton_6}     
-    Sleep    ${Timeout}    
-    Select All From List    ${CommonListBox_loc}
-    Click Element    ${btnright_loc}    
-    Click Element    ${updatebutton_loc} 
-    Click Element    ${RoleMatrixYesBn}       
-    Sleep    ${Timeout}
-    Click Element    ${PageAccessButton_8} 
-    Sleep    ${Timeout}    
-    Select All From List    ${CommonListBox_loc}
-    Click Element    ${btnright_loc}    
-    Click Element    ${updatebutton_loc} 
-    Click Element    ${RoleMatrixYesBn}       
-    Sleep    ${Timeout}
+    # Click Element    ${PageAccessButton_6}     
+    # Sleep    ${Timeout}    
+    # Select All From List    ${CommonListBox_loc}
+    # Click Element    ${btnright_loc}    
+    # Click Element    ${updatebutton_loc} 
+    # Click Element    ${RoleMatrixYesBn}       
+    # Sleep    ${Timeout}
+    # Click Element    ${PageAccessButton_8} 
+    # Sleep    ${Timeout}    
+    # Select All From List    ${CommonListBox_loc}
+    # Click Element    ${btnright_loc}    
+    # Click Element    ${updatebutton_loc} 
+    # Click Element    ${RoleMatrixYesBn}       
+    # Sleep    ${Timeout}
     
     Click Element    ${PageAccessButton_10} 
     Sleep    ${Timeout}    

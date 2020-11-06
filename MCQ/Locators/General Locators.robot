@@ -129,4 +129,5 @@ ${AssignTaskEditButton}    xpath:(//*[@title='Edit'])[1]
 ${ComposeSendButton}    xpath://*[@id='btnEmailSend']
 ${ComposeDraftButton}    xpath://*[@id='btnEmailDraft']
 ${ComposeDiscardButton}    xpath://*[@id='btnEmailDiscard']
+${OnlineExam}    xpath://*[(text()=' Online Exam ')]
 

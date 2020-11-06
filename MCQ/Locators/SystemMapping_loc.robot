@@ -1,0 +1,11 @@
+*** Variables ***
+${SearchConfigName_loc}    xpath://*[@id='txtsearchSystemKey']
+${SearchConfigbn}    xpath://*[@id='btnSystemSearch']
+${Editbn}    xpath://*[@id='Systemgrid']/tbody/tr[2]/td[4]
+${VerifySystemValue_loc}    xpath://*[@id='Systemgrid']/tbody/tr[2]/td[3]
+${DomainNameSystemValue_loc}    xpath://*[@id='txtStringSystemValue']
+${SaveDomainNamebn}    xpath://*[@id='btnSaveTextBoxSystemConfigValue']
+${BatchYearSystemValue_loc}    xpath://*[@id='DdlSystemValue']
+${SaveBatchYearbn}    xpath://*[@id='btnSaveDropdownListSystemConfigValue']
+${MobileDigitsSytsemValue_loc}    xpath://*[@id='txtIntSystemValue']
+${SaveMobileDigitsbn}    xpath://*[@id='btnSaveTextBoxSystemConfigValue']
