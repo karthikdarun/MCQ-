@@ -9,3 +9,4 @@ Adding records for default types in Default Master
     Navigate to Default Master screen
     Adding records for default types and verify it
     logout from the application
+    
