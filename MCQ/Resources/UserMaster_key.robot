@@ -9,15 +9,11 @@ Resource    ../TestData/General TestData.robot
 
 *** Keywords ***    
     
-Navigate to User Master screen
-    Click Element    ${SystemMaster_menu}  
-    Sleep    ${timeout}  
-    Click Element    ${UserMaster_Menu} 
-    Sleep    ${timeout} 
+ 
           
     
 Create and Verify the users
-    FOR    ${index}    IN RANGE    0    4
+    FOR    ${index}    IN RANGE    0    3
     Click Element    ${AddButtonInViewScreen} 
     Sleep    ${timeout}       
     Select From List By Label    ${SelectProject}    ${ProjectSearch}[${index}]    

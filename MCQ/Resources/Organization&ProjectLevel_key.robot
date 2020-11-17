@@ -6,15 +6,11 @@ Resource    General keywords.robot
 
 *** Keywords ***
     
-Navigation to Organization level setup
+Navigate to Organization level setup
     Click Element    ${System Master_loc}   
-    # Sleep    ${Timeout}
-    # Execute Javascript    window.scrollBy(900, 900)
-    # Scroll Element Into View    ${Organization Level SetUp'_loc}
     Sleep    ${Timeout}
     Click Element    ${Organization Level SetUp'_loc}    
-    Sleep    ${Timeout}  
-        
+    Sleep    ${Timeout}        
        
     
 Add Organization setup and Verify it

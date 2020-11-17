@@ -1,6 +1,7 @@
+
 *** Variables ***
 ${Projectcode_data}    SGE_001
-${ProjectName_data}    Automation_001
+${ProjectName_data}    Automation_12 
 ${emaiConfig_data}    Email Config
 ${TimeZone_data}    India Standard Time
 ${ContactPerson_data}    karthik

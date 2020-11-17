@@ -8,7 +8,7 @@ Resource    ../TestData/RoleMapping_Data.robot
 
     
 Map the users for the Roles and verify it
-    FOR    ${index}    IN RANGE    0    4
+    FOR    ${index}    IN RANGE    0    3
     Wait Until Element Is Visible    ${SelectProject_loc}    
     Select From List By Label    ${SelectProject_loc}    ${SelectProject_Data}[${index}]   
     Sleep    ${Timeout}

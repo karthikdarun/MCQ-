@@ -13,13 +13,13 @@ Page and Menu Access For All Roles
     # Provide Menu and Page access for Student
     
     
-    Login into the application as Admin
-    Verify Menu and page access for Admin
-    logout from the application
+    # Login into the application as Admin
+    # Verify Menu and page access for Admin
+    # logout from the application
     
-    Login into the application as Teacher
-    Verify Menu and page access for Teacher
-    logout from the application
+    # Login into the application as Teacher
+    # Verify Menu and page access for Teacher
+    # logout from the application
     
     Login into the application as Student
     Verify Menu and page access for Student

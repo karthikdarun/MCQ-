@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary    
 Resource    ../Locators/RoleMatrix_loc.robot
+Resource    ../Locators/General Locators.robot
 Resource    ../TestData/RoleMatrix_data.robot
 
 
@@ -20,23 +21,23 @@ Provide Menu and Page access for Admin
         # Click Element    ${elements}[${index}]    
     # END             
     Select Checkbox    ${DefaultMasterMapping_ckbox}       
-    Sleep    ${Timeout}
+   
     Select Checkbox    ${RoleMapping_ckbox}         
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${RoleMatrix_ckbox}       
-    Sleep    ${Timeout}
+   
     Select Checkbox    ${SystemMapping_ckbox}        
-    Sleep    ${Timeout}    
+     
     Select Checkbox    ${UserMaster_ckbox}    
-    Sleep    ${Timeout}
+   
     Select Checkbox    ${RoleMaster_ckbox}    
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${WFS_ckbox}        
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${ChangePass_ckbox}        
-    Sleep    ${Timeout}
+   
     Select Checkbox    ${DefaultMaster_ckbox}    
-    Sleep    ${Timeout} 
+  
     Scroll Element Into View    ${UpdatebuttonRoleMatrix_loc}   
     Click Element    ${UpdatebuttonRoleMatrix_loc}     
     Click Element    ${RoleMatrixYesBn}
@@ -150,12 +151,14 @@ Verify Menu and page access for Admin
     Click Element    ${UserMaster_Menu}
     Sleep    ${Timeout}
     Element Should Be Visible    ${UM_searchText} 
+    Sleep    ${Timeout}
     Element Should Be Enabled    ${DelButton}
     Element Should Be Enabled    ${AddButton}               
     Element Text Should Be    ${RoleMaster_Menu}    ${RoleMaster_Text}
     Click Element    ${RoleMaster_Menu}
     Sleep    ${Timeout}    
-    Element Should Be Visible    ${RoleMasterSearchText}  
+    Element Should Be Visible    ${RoleMasterSearchText}
+    Sleep    ${Timeout}  
     Element Should Be Visible    ${RoleMasterAddButton}    
     Element Should Be Visible    ${RoleMasterDelButton}    
       
@@ -175,9 +178,10 @@ Verify Menu and page access for Admin
     Click Element    ${WFS_Menu}
     Element Should Be Visible    ${WFSSearchText}            
     Element Text Should Be    ${SystemMappingMenu}    ${SystemMapping_Text}
+    Click Element    ${SystemMappingMenu}    
     Click Element    ${SystemMappinSubMenu}
     Sleep    ${Timeout}    
-    Element Should Be Visible    ${SystemmappingSearch}
+    Element Should Be Visible    ${SystemMappingSearch}
     Element Should Be Visible    ${SystemMappingEditbutton}        
     Element Text Should Be    ${RoleMatrixMenu}    ${RoleMatrix_Text}
     Click Element    ${RoleMatrixMenu} 
@@ -207,21 +211,21 @@ Provide Menu and Page access for Teacher
     Sleep    ${Timeout}
     
     Select Checkbox    ${Reports_ckbox}
-    Sleep    ${Timeout}    
+      
     Select Checkbox    ${ExamModeMaster_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${ExamUserImport_ckbox}
-    Sleep    ${Timeout}
+   
     Select Checkbox    ${GradeMaster_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${Addressbook_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${WkFlow_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${EducationLevel_ckbox}
-    Sleep    ${Timeout}
+   
     Select Checkbox    ${ExamUserImport_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${EducationLevelImport_ckbox}
     Sleep    ${Timeout}
     Execute Javascript    window.scrollBy(900, 900)
@@ -229,57 +233,50 @@ Provide Menu and Page access for Teacher
     Select Checkbox    ${SubjectLevelMapping_ckbox}
     Sleep    ${Timeout}
     Select Checkbox    ${SubjectLecturerLevelSetUp_ckbox}
-    Sleep    ${Timeout}
+   
     Select Checkbox    ${UserMaster_ckbox}
-    Sleep    ${Timeout}
+   
     Select Checkbox    ${WFS_ckbox}
-    Sleep    ${Timeout}
+   
     Select Checkbox    ${ChangePass_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${DefaultMaster_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${Compose_ckbox}
-    Sleep    ${Timeout}      
+         
     Select Checkbox    ${InternalEmail_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${Inbox_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${Drafts_ckbox}
-    Sleep    ${Timeout}
+   
     Select Checkbox    ${Trash_ckbox}
-    Sleep    ${Timeout}
+   
     Execute Javascript    window.scrollBy(900, 900)
     Sleep    ${Timeout}
     Select Checkbox    ${SentMail_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${QuestionDetailsImport_ckbox}
-    Sleep    ${Timeout}    
+        
     Select Checkbox    ${Question Details_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${ExamUserAccess_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${ExamSetupDetails_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${TaskView_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${Create Task_ckbox}
-    Sleep    ${Timeout}
+    
     Select Checkbox    ${AssignTask_ckbox}
-    Sleep    ${Timeout}
+    
     Scroll Element Into View    ${UpdatebuttonRoleMatrix_loc}
-    Sleep    ${Timeout}
+    
     Click Element    ${UpdatebuttonRoleMatrix_loc} 
     Click Element    ${RoleMatrixYesBn}
     Sleep    ${Timeout} 
     
-    
-    # Click Element    ${PageAccessButton_2} 
-    # Sleep    ${Timeout}    
-    # Select All From List    ${CommonListBox_loc}
-    # Click Element    ${btnright_loc}    
-    # Click Element    ${updatebutton_loc} 
-    # Click Element    ${RoleMatrixYesBn}       
-    # Sleep    ${Timeout}
+   
     
     Click Element    ${ExamModeMaster_Pageaccess} 
     Sleep    ${Timeout}    
@@ -514,94 +511,127 @@ Provide Menu and Page access for Teacher
     
     Click Element    ${UpdatebuttonRoleMatrix_loc} 
     Click Element    ${RoleMatrixYesBn}
+    Sleep    ${Timeout}
     
 
 Verify Menu and page access for Teacher
-    Click Element    ${Dashboard_Menu}    
-    Element Text Should Be    ${DashboardHome}    ${Dashboard_Text} 
-    Click Element    ${Dashboard_Menu}    
-    Element Text Should Be    ${DashboardHome}    ${DashboardHome_text}
+     
+    # Element Text Should Be    ${Dashboard_Menu}    ${Dashboard_Text} 
+    
+    # Element Text Should Be    ${DashboardHome}    ${DashboardHome_text}
         
-    Click Element    ${SystemMaster_Menu}
-    Click Element    ${UserMaster_Menu}
-    Element Should Be Visible    ${UM_searchText}    
-    Click Element    ${WFS_Menu}    
-    Element Should Be Visible    ${WFSSearchText}
-    Click Element    ${ChangePass_Menu}    
-    Element Should Be Visible    ${ChangePassSearchText}
-    Click Element    ${DefaultMaster_Menu}    
-    Element Should Be Visible    ${DefaultMasterSearch} 
+    # Click Element    ${SystemMaster_Menu}
+    # Click Element    ${UserMaster_Menu}
+    # Sleep    ${MinTimeout}
+    # Element Should Be Visible    ${UM_searchText}    
+    # Click Element    ${WFS_Menu}    
+    # Element Should Be Visible    ${WFSSearchText}
+    # Click Element    ${ChangePass_Menu}    
+    # Element Should Be Visible    ${ChangePassSearchText}
+    # Click Element    ${DefaultMaster_Menu}    
+    # Element Should Be Visible    ${DefaultMasterSearch} 
     
-    Click Element    ${ExamMasterMenu}    
-    Click Element    ${ExamModeMaster_Menu}
-    Element Should Be Visible    ${ExamModeMasterSearch}
-    Click Element    ${ExamMasterMenu}    
-    Click Element    ${GradeMaster_Menu}
-    Element Should Be Visible    ${GradeMasterSearch}
+    # Click Element    ${ExamMasterMenu} 
+    # Sleep    ${MinTimeout}   
+    # Click Element    ${ExamModeMaster_Menu}
+    # Sleep    ${MinTimeout}
+    # Element Should Be Visible    ${ExamModeMasterSearch}
+       
+    # Click Element    ${GradeMaster_Menu}
+    # Element Should Be Visible    ${GradeMasterSearch}
       
-    Click Element    ${Address_Menu}
-    Element Should Be Visible    ${AddressbookHome}
+    # Click Element    ${Address_Menu}
+    # Element Should Be Visible    ${AddressbookHome}
+    # Sleep    ${Timeout}
       
-    Click Element    ${EducationLevelMenu}
-    Element Should Be Visible    ${EducationLevelSearch}
+    # Click Element    ${EducationLevelMenu}
+    # Element Should Be Visible    ${EducationLevelSearch}
+    # Sleep    ${MinTimeout}
     
-    Click Element    ${ExamUSerImport_menu}
-    Element Should Be Visible    ${ExamUserImportHome}
+    # Click Element    ${ExamUSerImport_menu}
+    # Element Should Be Visible    ${ExamUserImportHome}
+    # Sleep    ${MinTimeout}
      
-    Click Element    ${EduLevelImport_menu}
-    Element Should Be Visible    ${EduLevelImportHome}
-     
-    Click Element    ${QuestionDetailsImport_Menu}
-    Element Should Be Visible    ${QuestionDetailsImportHome} 
-    Click Element    ${QuestionDetails_Menu}
-    Element Should Be Visible    ${QuestionDetailsSearch}
+    # Click Element    ${EduLevelImport_menu}
+    # Element Should Be Visible    ${EduLevelImportHome}
+    # Sleep    ${MinTimeout}
+    # # Execute Javascript    window.scrollBy(900, 900)
+    # # Execute Javascript    window.scrollBy(900,900)
+    # Click Element    ${QuestionMaster_Menu}
+    # Sleep    ${MinTimeout}     
+    # Click Element    ${QuestionDetailsImport_Menu}
+    # Element Should Be Visible    ${QuestionDetailsImportHome} 
+    # Click Element    ${QuestionDetails_Menu}
+    # Element Should Be Visible    ${QuestionDetailsSearch}
+    # Sleep    ${MinTimeout}
     
-    Click Element    ${ExamSetupMenu}        
+    # Click Element    ${ExamSetupMenu}        
+    # Sleep    ${MinTimeout}                     
+    # Click Element    ${ExamUSerAccess_Menu}
+    # Sleep    ${MinTimeout}
+    # Element Should Be Visible    ${ExamUserAccessSearch} 
+    # Sleep    ${MinTimeout}   
                           
-    Click Element    ${ExamUSerAccess_Menu}
-    Element Should Be Visible    ${ExamUserAccessSearch}    
+    # Click Element    ${ExamSetupDetails_Menu}
+    # Sleep    ${MinTimeout}
+    # Element Should Be Visible    ${ExamSetupDetailssearch}
+    # Sleep    ${MinTimeout}    
                           
-    Click Element    ${ExamSetupDetails_Menu}
-    Element Should Be Visible    ${ExamSetupDetailssearch}    
+
+    # Click Element    ${EducationSetup_Menu}
+    # Sleep    ${MinTimeout}
+    # Click Element    ${SubjectLevelMapping_Menu}    
+    # Element Should Be Visible    ${SubjectLevelSetupSearch}    
                           
-    Click Element    ${EducationSetup_Menu}
-    Click Element    ${SubjectLevelMapping_Menu}    
-    Element Should Be Visible    ${SubjectLevelSetupSearch}    
+    # Click Element    ${SubjectlecturerLevelSetup_menu}
+    # Element Should Be Visible    ${SubLecturerLevelsetupsearch} 
+    # Sleep    ${Timeout}   
                           
-    Click Element    ${SubjectlecturerLevelSetup_menu}
-    Element Should Be Visible    ${SubLecturerLevelsetupsearch}    
+    # Click Element    ${TaskMaster_menu}
+    # Sleep    ${MinTimeout}
+    # Click Element    ${TaskView_menu}        
+    # Element Should Be Visible    ${TaskViewSearch}    
                           
-    Click Element    ${TaskMaster_menu}
-    Click Element    ${TaskView_menu}        
-    Element Should Be Visible    ${TaskViewSearch}    
-                          
-    Click Element    ${CreateTask_menu}
-    Element Should Be Visible    ${CreateTaskHome}
+    # Click Element    ${CreateTask_menu}
+    # Element Should Be Visible    ${CreateTaskHome}
     
-    Click Element    ${AssignTask_menu}
-    Element Should Be Visible    ${AssignTaskSearch}        
-    Element Should Be Visible    ${AssignTaskDelButton}
-    Element Should Be Visible    ${AssignTaskEditButton}    
-    Element Should Be Visible    ${AssignTaskResetButton}    
-    Element Should Be Visible    ${AssignTaskSaveButton}    
+    # Click Element    ${AssignTask_menu}
+    # Element Should Be Visible    ${AssignTaskSearch}        
+    # Element Should Be Visible    ${AssignTaskDelButton}
+    # Element Should Be Visible    ${AssignTaskEditButton}    
+    # Element Should Be Visible    ${AssignTaskResetButton}    
+    # Element Should Be Visible    ${AssignTaskSaveButton}    
     
-    
+    Execute Javascript    window.scrollBy(900,900)
     Click Element    ${internalemail_menu}
-    Click Element    ${Compose_menu}    
+    Sleep    ${MinTimeout}
+    Click Element    ${Compose_menu} 
+    Sleep    ${MinTimeout}  
+    Execute Javascript    window.scrollBy(0,0) 
     Element Should Be Visible    ${ComposeDiscardButton}
-    Element Should Be Visible    ${ComposeDraftButton}    
-    Element Should Be Visible    ${ComposeHome}    
+    Element Should Be Visible    ${ComposeDraftButton}     
     Element Should Be Visible    ${ComposeSendButton}
     
+    Scroll Element Into View    ${ComposeHome}
+    Element Should Be Visible    ${ComposeHome}   
     Click Element    ${Inbox_menu}
     Element Should Be Visible    ${Inbox_menu}
+    Execute Javascript    window.scrollBy(900,900)
     Click Element    ${Drafts_menu}
+    Scroll Element Into View    ${DraftsHome}
     Element Should Be Visible    ${DraftsHome}
+    Execute Javascript    window.scrollBy(900,900)
     Click Element    ${Trash_menu}
+    Scroll Element Into View    ${TrashHome}
     Element Should Be Visible    ${TrashHome}
-    Click Element    ${${SentMail_menu}}
+    Execute Javascript    window.scrollBy(900,900)
+    Click Element    ${SentMail_menu}
+    Scroll Element Into View    ${SentMailHome}
     Element Should Be Visible    ${SentMailHome}
+    Execute Javascript    window.scrollBy(900,900)
+    Sleep    ${timeout}
     Click Element    ${Reports_menu}
+    Scroll Element Into View    ${ExamStatusReportSearch}
     Element Should Be Visible    ${ExamStatusReportSearch}
     
     
@@ -821,8 +851,8 @@ Provide Menu and Page access for Student
     Sleep    ${Timeout}
     
 Verify Menu and page access for Student
-    Click Element    ${Dashboard_Menu}    
-    Element Should Be Visible    ${DashboardHome_text}
+       
+    Element Should Be Visible    ${DashboardHome}
     Click Element    ${SystemMaster_Menu} 
     Click Element    ${ChangePass_Menu}       
     Element Should Be Visible    ${ChangePassSearchText}
@@ -832,6 +862,7 @@ Verify Menu and page access for Student
     Element Should Be Visible    ${OverallExamReportSearch}    
     Click Element    ${ExamScheduler_menu}    
     Element Should Be Visible    ${ExamStatusReportSearch}
+    Sleep    ${MinTimeout}
     
     Click Element    ${internalemail_menu} 
     Click Element    ${Compose_menu}       
@@ -840,25 +871,35 @@ Verify Menu and page access for Student
      Element Should Be Visible    ${ComposeDraftButton}
      Element Should Be Visible    ${ComposeSendButton}
     
-    Click Element    ${Inbox_menu}    
+    Click Element    ${Inbox_menu}
     Element Should Be Visible    ${InboxHome}
-    Click Element    ${Drafts_menu}    
+        Click Element    ${Drafts_menu}    
     Element Should Be Visible    ${DraftsHome}
+    Sleep    ${timeout}
     Click Element    ${Trash_menu}    
     Element Should Be Visible    ${TrashHome}
-    Click Element    ${SentMail_menu}    
+    Execute Javascript    window.scrollBy(900,900)
+    Sleep    ${timeout}
+    Click Element    ${SentMail_menu}  
+    Scroll Element Into View    ${SentMailHome}  
     Element Should Be Visible    ${SentMailHome}
     Click Element    ${StudentTaskView_menu}    
     Element Should Be Visible    ${StudenTaskViewHome}
+    Sleep    ${MinTimeout}
     
     Click Element    ${PracticeExams_menu}
     Click Element    ${PracticeExamView_Menu}        
     Element Should Be Visible    ${PracticeExamViewHome}
     Click Element    ${PracticeExamSetup_Menu}
+    Sleep    ${timeout}
     Element Should Be Visible    ${PracticeExamSetupAddButton}    
-    Element Should Be Visible    ${PracticeExamSetupDelButton}        
+    Element Should Be Visible    ${PracticeExamSetupDelButton}
+    Execute Javascript    window.scrollBy(900,900)        
     Click Element    ${AssignPracticeExam_Menu}
-    Click Element    ${AssignPracticeExam_Home}        
+    Sleep    ${timeout}
+    Scroll Element Into View    ${AssignPracticeExam_Home}
+    Element Should Be Visible    ${AssignPracticeExam_Home}
+    Sleep    ${timeout}        
     
 
     

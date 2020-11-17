@@ -1,3 +1,8 @@
+*** Settings ***
+Resource    ../TestData/OnlineExam_data.robot
+
+
+
 *** Variables ***
 ${SelectBatchYear_loc}    xpath://*[@id='DdlExamUserBatchYear']
 ${SelectexamLevel_loc}    xpath://*[@id='DdlExamUserExamLevel']
@@ -5,8 +10,8 @@ ${SelectExamMode_loc}    xpath://*[@id='DdlExamMasterExamMode']
 ${SearchExamBn}    xpath://*[@id='btnOnlineExamSearch']
 ${TakeExambn}    xpath://*[@id='btnTakeExam']
 ${GoToExambn}    xpath://*[@id='BtnGotoExam']
-${True_1stradio button}    xpath:(//*[@id='AnswerChoice'])[1]
-${False_2ndradiobn}    xpath:(//*[@id='AnswerChoice'])[2]
+${Answer_True}    xpath://*[text()=' ${Ans_true}']//ancestor::tr/descendant::input[@id='AnswerChoice']
+${Answer_False}    xpath://*[text()=' ${Ans_false}']//ancestor::tr/descendant::input[@id='AnswerChoice']
 ${Nextbn}    xpath://*[@id='Nextquestions']
 ${Skipbn}    xpath://*[@id='Skipquestions']
 ${Completebn}    xpath://*[@id='btnCompleted']

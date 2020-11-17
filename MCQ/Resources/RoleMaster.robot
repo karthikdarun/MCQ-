@@ -4,13 +4,10 @@ Resource    ../Locators/RoleMaster.robot
 Resource    ../TestData/RoleMaster_Data.robot      
 
 *** Keywords ***
-Navigate to Role Master screen
-    Click Element    xpath:(//div[@id='DivLeftMenuMain']//descendant::a)[2]    
-    Click Element    xpath://a[contains(.,'Role Master')]
-    Sleep    4 
+
     
 Add and Verify the Roles
-    FOR    ${index}    IN RANGE    0    5
+    FOR    ${index}    IN RANGE    0    4
     Click Element    ${RoleAddButton}    
     Sleep    ${Timeout}
     Wait Until Element Is Visible    ${RoleProjectSelect}   

@@ -27,8 +27,11 @@ Perform Subject level setup and verify it
        
     Click Element    ${VerifySubCode_loc}    
     Sleep    ${timeout}
+    Execute Javascript    window.scrollBy(900,900)
+    Sleep    ${timeout}
     
     Click Element    ${AddModulebn}
+    Sleep    ${timeout}
     Input Text    ${InputModuleName_loc}    ${InputModuleName_data}    
     Click Element    ${SaveModulebn}    
     Click Element    ${YesButton}    
@@ -47,7 +50,8 @@ Perform Subject level setup and verify it
     Click Element    ${VerifyTopic_loc}    
     Sleep    ${timeout}
     
-    Click Element    ${AddObjectivebn}    
+    Click Element    ${AddObjectivebn}
+    Sleep    ${timeout}    
     Input Text    ${InputObj_loc}    ${InputObj_data}    
     Click Element    ${SaveObjectivebn}    
     Click Element    ${YesButton}    

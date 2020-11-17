@@ -4,11 +4,12 @@ ${Superadmin username}    superadmin
 ${Superadmin password}    P@ssw0rd
 ${Admin Username}    admin_001
 ${Admin Password}    Admin_001@123
-${Teacher username}    teacher_001
-${Teacher Password}    Teacher_001@123
+${Teacher username}    teacher_002
+${Teacher Password}    Teacher_002@123
 ${Verifier Username}    verifier_001
 ${Verifier Password}    Verifier_001@12
 ${Approver Username}    approver_001
 ${Approver Password}    Approver_001@12
-${Student username}    student10 
-${Student Password}    Student!1   
+${Student username}    student19 
+${Student Password}    Student!1 
+${Timeout}    3  

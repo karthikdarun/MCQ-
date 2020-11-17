@@ -1,9 +1,9 @@
 *** Variables ***
 
-${StudentLoginName_data}    student10    
+${StudentLoginName_data}    student18    
 ${txtExamUserPassword_data}   Student!1     
 ${txtExamUserFirstName_data}    student       
-${txtExamUserLastName_data}    10    
+${txtExamUserLastName_data}    18    
 ${txtExamUserEmailID_data}    student5@gmail.com        
 ${txtExamUserMobileNumber_data}    9874563214        
 ${DdlBatchYear_ExamUser_data}    2020    
@@ -15,6 +15,4 @@ ${txtExamUserAddress_data}     89 Serangoon Rd, Singapore 201458
 ${ExamUserSelectLanguage_data}    English    
 ${ExamuserDisplayAlert_data}    EmailAlert
 ${Student1_data}    ${txtExamUserFirstName_data}    ${txtExamUserLastName_data} 
-${SelectroleStudent_data}    Student        
-
-    
+${SelectroleStudent_data}    Student          

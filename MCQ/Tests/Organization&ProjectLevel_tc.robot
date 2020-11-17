@@ -7,7 +7,7 @@ Resource    ../Resources/Organization&ProjectLevel_key.robot
 
 Organization Setup
     Login as Super Admin
-    Navigation to Organization level setup
+    Navigate to Organization level setup
     Add Organization setup and Verify it
     
     

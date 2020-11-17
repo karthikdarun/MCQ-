@@ -48,7 +48,18 @@ Login into the application as Student
 Navigate to Role matrix Page
     Click Element    ${SystemMappingMenu}    
     Click Element    ${RoleMatrixMenu}
-    Sleep    ${timeout}    
+    Sleep    ${timeout}  
+    
+Navigate to User Master screen
+    Click Element    ${SystemMaster_menu}  
+    Sleep    ${timeout}  
+    Click Element    ${UserMaster_Menu} 
+    Sleep    ${timeout} 
+    
+Navigate to Role Master screen
+    Click Element    ${SystemMaster_Menu}    
+    Click Element    ${RoleMaster_Menu}
+    Sleep    ${timeout}  
     
 Navigate to Exam user master
     Click Element    ${ExamMasterMenu}
@@ -105,7 +116,9 @@ Login into the application as Approver
     Input Password    ${LoginPasswordTextbox}    ${Approver Password}
     Sleep    ${timeout}    
     Click Button    ${login_Button}
-    Sleep    ${timeout}   
+    Sleep    ${timeout}
+    
+  
 
 
 logout from the application 

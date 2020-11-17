@@ -38,9 +38,9 @@ Add Students and verify it
     Log To Console    ${textvalue}          
     Element Text Should Be    ${VerifyStudentLogin_loc}    ${StudentLoginName_data}    
     
-Map the user with student role and verify it
+Map exam user with student role and verify it
     Select From List By Label    ${SelectroleStudent_loc}    ${SelectroleStudent_data}
-    Click Element    ${RoleMappingSearchButton}
+    Click Element    ${Searchbutton_loc}
     Sleep    ${timeout}
     
     Wait Until Element Is Visible    ${AvailableusersStudent_loc}    
@@ -49,7 +49,8 @@ Map the user with student role and verify it
     Click Element    ${RoleUpdatebuttonStudent}
     Click Element    ${YesButton} 
     Sleep    ${timeout}
-    Element Text Should Be    ${SelectedusersStudent_loc}    ${Student1_data}    
+    Element Text Should Be    ${SelectedusersStudent_loc}    ${Student1_data}
+        
     
 
 

@@ -16,12 +16,12 @@ Navigate to Workflow screen
     
     
 Add Workflow and verify it
-    # Click Element    ${AddWorkFlow}    
-    # Input Text    ${WorkFlowCode_loc}    ${WorkFlowCode_data}
-    # Input Text    ${WorkFlowName_loc}    ${WorkFlowName_data}    
-    # Click Element    ${SaveWorkflow}
-    # Click Element    ${YesButton}    
-    # Sleep    ${timeout}
+    Click Element    ${AddWorkFlow}    
+    Input Text    ${WorkFlowCode_loc}    ${WorkFlowCode_data}
+    Input Text    ${WorkFlowName_loc}    ${WorkFlowName_data}    
+    Click Element    ${SaveWorkflow}
+    Click Element    ${YesButton}    
+    Sleep    ${timeout}
     Input Text    ${SearchWorkflowCode_loc}    ${SearchWorkflowCode_data}
     Sleep    ${timeout}
     Click Element    ${SearchWorflowbutton}    

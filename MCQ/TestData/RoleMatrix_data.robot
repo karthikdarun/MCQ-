@@ -5,7 +5,7 @@ ${RoleMatrixRoleTeacher_data}    Teacher
 ${RoleMatrixRoleVerifier_data}    Verifier
 ${RoleMatrixRoleApprover_data}    Approver
 ${RoleMatrixRoleStudent_data}    Student 
-${Timeout}    2
+${MinTimeout}    1
 ${Dashboard_Text}    Dashboard 
 ${DashboardHome_text}    Welcome to Dashboard  
 ${SystemMaster_Text}     System Master
