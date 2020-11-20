@@ -1,14 +1,19 @@
+*** Settings ***
+Resource    ExamMaster_data.robot
+Resource    EducationSetup_data.robot
+
+
 *** Variables ***
 ${MinTimeout}    2
 ${MaxTimeout}    4
-${Examcode_data}    Exam_142           
-${ExamName_data}    Revision Test24          
+${Examcode_data}    Exam_149           
+${ExamName_data}    Revision Test149         
 ${ExamType_data}    OnLine            
 ${Examdate_data}    17-Oct-2020            
 ${TotalMarks_data}    100                
-${PassMarks_data}    40                    
-${ExamGrade_data}    ABC               
-${ExamSetupWFS_data}    FL_001 - First Level                  
+${PassMarks_data}    50                    
+${ExamGrade_data}    ${GradecodeText_data}               
+                 
 ${ExamDurationTextbox_data}    01:00                   
 ${ExamSectionOrder_data}    1     
 ${ExamSectionName_data}    A      
@@ -19,12 +24,12 @@ ${ExamSecGrpQuestionsFrom_data}    1
 ${ExamSecQuestionsTo_data}    5          
 ${ExamSecQuestionsCount_data}    5    
 ${SectionGrpIndivMarks_data}    20  
-${SelectSubject_data}    Science   
-${SelectModule_data}    Living
-${SelectTopic_data}    Plants  
-${SelectObjective_data}    Plant A         
-${SelectquestionLevel_data}    1
-${SelectComplexity_data}    1      
+${SelectSubject_data}    ${InputSubjName_data}   
+${SelectModule_data}    ${InputModuleName_data}
+${SelectTopic_data}    ${InputTopic_data}  
+${SelectObjective_data}    ${InputObj_data}         
+${SelectquestionLevel_data}    ${QuestionLevel_data}
+${SelectComplexity_data}    ${QuestionComplexity_data}      
 ${QuestionsTypeQuestionsFrom_data}    1          
 ${QestionsTypeQuestionsTo_data}    5    
 ${QuestionsTypeQuestionCount_data}    5       
@@ -47,10 +52,10 @@ ${ApproveDescription_data}    TestApprove
 
 #####ExamUSerAccess############
     
-${SelectExamMode_data}    Online      
+${SelectExamMode_data}    Online2      
 ${SelectBatchYear_data}    2020   
 ${SelecteducationLevel_data}    Primary One     
 ${SelectGroupName_data}    Group A  
-${SelectAvailableuser_data}    student 06       
-${VerifySelectedUser_data}    student 06        
+${SelectAvailableuser_data}    ${StudentLoginName_data}       
+${VerifySelectedUser_data}    ${StudentLoginName_data}        
         

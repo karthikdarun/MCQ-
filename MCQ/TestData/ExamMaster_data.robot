@@ -49,7 +49,9 @@ ${SelectroleStudent_data}    Student
 ############WorkFlow##########################
 
 ${WorkFlowCode_data}    WkF_006    
-${WorkFlowName_data}    Test workflow   
+${WorkFlowName_data}    Test workflow
+# ${WorkflowStatus} =    Catenate   SEPARATOR=- ${WorkFlowCode_data}    ${WorkFlowName_data}       
+      
 ${SearchWorkflowCode_data}    ${WorkFlowCode_data}   
 ${VerifyWOrkflow_data}    ${WorkFlowCode_data}    
 @{SelectWorkFlowUser_data}    Verifier 001    Approver 001        

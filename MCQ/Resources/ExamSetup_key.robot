@@ -27,7 +27,9 @@ Add exam Verify it
     Input Text    ${TotalMarks_loc}    ${TotalMarks_data}
     Input Text    ${PassMarks_loc}    ${PassMarks_data}    
     Select From List By Label    ${ExamGrade_loc}    ${ExamGrade_data}
-    Select From List By Label    ${ExamSetupWFS_loc}    ${ExamSetupWFS_data}
+    ${WorkflowCodeName} =    Catenate   SEPARATOR=${SPACE}-${SPACE}    ${WorkFlowCode_data}    ${WorkFlowName_data}
+    Log To Console    ${WorkflowCodeName}     
+    Select From List By Label    ${ExamSetupWFS_loc}    ${WorkflowCodeName}
     Click Element    ${ExamDurationAuto_loc}       
     Click Element    ${examSaveButton}
     Click Element    ${YesButton_loc}        
@@ -131,7 +133,11 @@ Add exam Verify it
     
 Verify the exam by verifier
     Click Element    ${ExamForVerification}    
+    Sleep    ${MaxTimeout}
+    Input Text    ${ExamSearchExamName_loc}    ${ExamName_data}
     Sleep    ${MinTimeout}
+    Click Element    ${ExamSearchButton} 
+    Sleep    ${MinTimeout}       
     Click Element    ${VerifyButtonIn verifier}
     Sleep    ${MinTimeout}    
     Select From List By Label    ${SelectAction_loc}    ${SelectActionVerify_data}
@@ -148,6 +154,7 @@ Verify Pending for approval status
     Sleep    ${MaxTimeout}
     Input Text    ${ExamSearchExamName_loc}    ${ExamName_data}
     Click Element    ${ExamSearchButton}    
+
     Sleep    ${MinTimeout}
     Element Text Should Be    ${ExamLastActionStatus_loc}    ${ExamLastActionStatusApproval_data}
     
@@ -155,6 +162,10 @@ Verify Pending for approval status
     
 Approver the exam by Approver
     Click Element    ${ExamForApprover}
+    Sleep    ${MinTimeout}
+    Input Text    ${ExamSearchExamName_loc}    ${ExamName_data}
+    Sleep    ${MinTimeout}
+    Click Element    ${ExamSearchButton} 
     Sleep    ${MinTimeout}
     Click Element    ${ApproveButtonIn Approver}
     Sleep    ${MinTimeout}    

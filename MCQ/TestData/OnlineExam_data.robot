@@ -1,7 +1,7 @@
 *** Variables ***
 ${SelectBatchYear_data}    2020    
 ${SelectexamLevel_data}    Primary One    
-${SelectExamMode_data}    Online     
+${SelectExamMode_data}    Online2     
 ${PassTxt_data}    Pass
 ${TotalQuestionsCount_data}    5 
 ${CorrectAnswerCount_data}    5   

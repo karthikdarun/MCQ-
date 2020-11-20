@@ -18,18 +18,15 @@ Add Grades in Grade Master
     Navigate to Grade Master screen
     Add grades and Verify it
     
-Add Education Level and Group
-    
+Add Education Level and Group    
     Navigate to Education level
     Add Education level and verify it    
     
-Add workflow and verify it
-    
+Add workflow and verify it    
     Navigate to Workflow screen
     Add Workflow and verify it
         
-Student creation 
-   
+Student creation   
     Navigate to Exam user master
     Add Students and verify it
     logout from the application

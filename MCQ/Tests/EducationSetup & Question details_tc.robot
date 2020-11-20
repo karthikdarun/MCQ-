@@ -14,8 +14,7 @@ Perform Subject lecturer level setup
     Navigate to Subject lecturer level setup
     Map subject with lecturer/teacher and verify it
     
-Add questions and answers
-    
+Add questions and answers    
     Navigate to question details
     Add questions and verify it
     logout from the application

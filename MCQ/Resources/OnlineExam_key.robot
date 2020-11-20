@@ -7,9 +7,10 @@ Resource    ../TestData/General TestData.robot
 
 *** Keywords ***
  Navigate to Online exam
-    Click Element    ${OnlineExam}
-    Sleep    ${timeout}
-           
+    # Click Element    ${okbutton}    
+    # Sleep    ${MinTimeout}
+    Click Element    ${OnlineExam_Menu}
+    Sleep    ${timeout}           
     
 Take online exam and verify it
    Select From List By Label    ${SelectBatchYear_loc}    ${SelectBatchYear_data}
@@ -21,15 +22,15 @@ Take online exam and verify it
    Click Element    ${TakeExambn}    
    Sleep    ${timeout}
    Click Element    ${GoToExambn}
-   Click Element    ${True_1stradio button}
+   Click Element    ${Answer_yes}
    Click Element    ${Nextbn}    
-   Click Element    ${True_1stradio button}    
+   Click Element    ${Answer_yes}    
    Click Element    ${Nextbn}    
-   Click Element    ${True_1stradio button}    
+   Click Element    ${Answer_yes}    
    Click Element    ${Nextbn}
-   Click Element    ${True_1stradio button}    
+   Click Element    ${Answer_yes}    
    Click Element    ${Nextbn}    
-   Click Element    ${True_1stradio button}
+   Click Element    ${Answer_yes}
    Execute Javascript    window.scrollBy(900,900)
    Sleep    ${timeout}      
    Click Element    ${Completebn}

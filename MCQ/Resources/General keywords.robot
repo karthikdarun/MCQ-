@@ -116,9 +116,7 @@ Login into the application as Approver
     Input Password    ${LoginPasswordTextbox}    ${Approver Password}
     Sleep    ${timeout}    
     Click Button    ${login_Button}
-    Sleep    ${timeout}
-    
-  
+    Sleep    ${timeout}  
 
 
 logout from the application 
