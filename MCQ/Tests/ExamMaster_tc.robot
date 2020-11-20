@@ -13,8 +13,7 @@ Add Exam Mode in Exam Mode Master
     Navigate to Exam Mode Master screen
     Add Exam Mode and Verify it    
     
-Add Grades in Grade Master
-    
+Add Grades in Grade Master    
     Navigate to Grade Master screen
     Add grades and Verify it
     
