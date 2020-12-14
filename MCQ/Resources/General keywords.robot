@@ -124,4 +124,5 @@ logout from the application
     Click Element    ${Logout_user} 
     Sleep    ${timeout}   
     Click Element    ${Logout_button}      
-    Close Browser   
+    Close Browser
+    Sleep    ${timeout}   

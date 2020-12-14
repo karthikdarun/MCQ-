@@ -1,14 +1,18 @@
 *** Settings ***
-Library    SeleniumLibrary    
+Library    SeleniumLibrary
+Library    DateTime        
 Resource    ../Resources/ExamSetup_key.robot
+
 
 *** Variables ***
 ${ExamSetupAddButton}    xpath://*[@id='btnExamdetailAdd']
 ${Examcode_loc}    xpath://*[@id='txtExamMasterExamCode']
 ${ExamName_loc}    xpath://*[@id='txtExamMasterExamName']
-${ExamType_loc}    xpath://*[@id='DdlExamMasterExamType']
+${ExamType_loc}    xpath://*[@id='DdlExamMasterExamType'] 
 ${ExamdateRadioButton_loc}    xpath://*[@id='AutoDate']
+${ExamDateText_loc}    xpath://*[@id='txtExamMasterExamDate']
 ${Examdatepicker_loc}    xpath:(//*[@id='ExamMasterdialog']//descendant::span)[3]
+
 # ${CurrentDate_loc}    xpath://td[@day='${day}']
 
 ${TotalMarks_loc}    xpath://*[@id='txtExamMasterTotalMarks']
@@ -31,7 +35,7 @@ ${ExamSectionTotalMarks_loc}    xpath://*[@id='txtExamTotalMarks']
 ${ExamSectionSaveButton_loc}    xpath://*[@id='btnExamSectionSave']
 ${ExamSectionViewRecord}    xpath://div[contains(text(),'A')]
 ${ExamSectionGroupAdd}    xpath://*[@id='btnExamSectionGrpdetailAdd']
-${GroupName_loc}    xpath://*[@id='txtExamSectionGroupName']
+${ExamGroupName_loc}    xpath://*[@id='txtExamSectionGroupName']
 ${ExamSecGrpQuestionsFrom_loc}    xpath://*[@id='txtExamSectionGroupQuestionsFrom']    
 ${ExamSecQuestionsTo_loc}    xpath://*[@id='txtExamSectionGroupQuestionsTo']    
 ${ExamSecQuestionsCount_loc}    xpath://*[@id='txtExamSectionGroupQuestionsCount']
@@ -39,13 +43,13 @@ ${SectionGrpIndivMarks_loc}    xpath://input[@id='txtExamSectionGroupMarks']
 ${ExamSecGrpDetailSave_loc}    xpath://*[@id='btnExamSectionGrpdetailSave']
 ${ExamsecGrpDetailView_loc}    xpath://div[contains(text(),'A1')]
 ${ExamSecQuestionTypeAdd_loc}    xpath://button[@id='btnExamSectionQuestionTypeAdd']
-${SelectSubject_loc}    xpath://select[@id='DdlQuestionTypeExamSubject']
-${SelectModule_loc}    xpath://select[@id='DdlQuestionTypeExamModule']
-${SelectTopic_loc}    xpath://select[@id='DdlQuestionTypeTopic']
-${SelectObjective_loc}    xpath://select[@id='DdlQuestionTypeObjective']
-${SelectquestionLevel_loc}    xpath://select[@id='ddlQuestionTypeLevelName']
-${SelectComplexity_loc}    xpath://select[@id='DdlQuestionTypeComplexity']
-${QuestionsTypeQuestionsFrom_loc}    xpath://input[@id='txtQuestionTypeQuestionsFrom']    
+${ExamSelectSubject_loc}    xpath://select[@id='DdlQuestionTypeExamSubject']
+${ExamSelectModule_loc}    xpath://select[@id='DdlQuestionTypeExamModule']
+${ExamSelectTopic_loc}    xpath://select[@id='DdlQuestionTypeTopic']
+${ExamSelectObjective_loc}    xpath://select[@id='DdlQuestionTypeObjective']
+${ExamSelectquestionLevel_loc}    xpath://select[@id='ddlQuestionTypeLevelName']
+${ExamSelectComplexity_loc}    xpath://select[@id='DdlQuestionTypeComplexity']
+${ExamQuestionsTypeQuestionsFrom_loc}    xpath://input[@id='txtQuestionTypeQuestionsFrom']    
 ${QestionsTypeQuestionsTo_loc}    xpath://input[@id='txtQuestionTypeQuestionsTo']
 ${QuestionsTypeQuestionCount_loc}    xpath://input[@id='txtQuestionTypeQuestionsCount']
 ${ExamSectionQuestionTypeSave_loc}    xpath://button[@id='btnExamSectionQuestionTypeSave']
@@ -55,8 +59,8 @@ ${AllCheckbox}    xpath://input[@id='QuestionGridAllCheckBox']
 ${ExamQuesQuestionSave}    xpath://button[@id='btnExamQuesQuestionSave']
 ${PassMarkEdit}    xpath://tbody/tr/td[7]/div
 ${PassmarkTextbox_loc}    xpath://*[@id='txtpassmark_undefined']
-${Updatebutton}    xpath://tbody/tr/td[7]/div/span[2]
-${SubmitButton}    xpath://button[@id='btnSubmission']
+${ExamUpdatebutton}    xpath://tbody/tr/td[7]/div/span[2]
+${ExamSubmitButton}    xpath://button[@id='btnSubmission']
 ${ExamSearchExamName_loc}    xpath://input[@id='txtExamsearchExamName']
 ${ExamSearchButton}    xpath://button[@id='btnExamSearch']
 ${ExamNameInGrid_loc}    xpath://*[@id='ExamMasterGrid']/tbody/tr/td[6] 
@@ -85,6 +89,8 @@ ${Verify/ApproveSubmit}    xpath://*[@id='btnWorkflowSubmit']
 
 ${ExamForApprover}    xpath://*[contains(text(),'Exam For Approval')]
 ${ApproveButtonIn Approver}    xpath://*[@title='Approve']
+
+
 
 
 

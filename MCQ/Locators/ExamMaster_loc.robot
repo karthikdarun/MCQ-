@@ -74,6 +74,7 @@ ${SeachButtonStudent_loc}    xpath://*[@id='btnLoginUserSearch']
 ${AvailableusersStudent_loc}    xpath://*[@id='lstUnSelectedUserID']
 ${RoleUpdatebuttonStudent}    xpath://*[@id='btnLoginUserUpdate']
 ${SelectedusersStudent_loc}    xpath://*[@id='lstSelectedUserID']
+${userlist}    xpath://select[@id='lstSelectedUserID']//child::option
 
 #######################WorkFlow##################
 

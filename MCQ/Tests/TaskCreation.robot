@@ -13,7 +13,7 @@ Create Task and verify it
     
 *** Keywords ***
 Navigate to create task
-    Click Element    ${TaskManager_menu}
+    # Click Element    ${TaskManager_menu}
     Click Element    ${CreateTask_menu}
     Sleep    2
     Input Text    xpath://*[@id='txtTaskName']    Task_1    

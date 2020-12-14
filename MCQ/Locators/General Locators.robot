@@ -3,7 +3,7 @@ ${LoginUsernameTextbox}    xpath://*[@id='TxtUserName']
 ${LoginPasswordTextbox}    xpath://*[@id='TxtPassword']
 ${LoginButton}    xpath://*[@ONCLICK='Login()']
 ${timeout}    3
-${MinTimeout}    1
+${MinTimeout}    2 
 ${Rightbutton}    xpath:(//*[@id='btnright'])[1]
 ${YesButton}    xpath:(//div[@class='jconfirm-buttons']/button)[1]
 ${Logout_user}    xpath://div[@id='DivTopMenuProfile']

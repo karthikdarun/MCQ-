@@ -1,10 +1,9 @@
 
-
 *** Settings ***
 Library    SeleniumLibrary    
 Resource    ../TestData/UserMaster_data.robot
 Resource    ../Locators/General Locators.robot
-Resource    ../Locators/UserMaster.robot
+Resource    ../Locators/UserMaster_loc.robot
 Resource    ../TestData/General TestData.robot
 
 *** Keywords ***    

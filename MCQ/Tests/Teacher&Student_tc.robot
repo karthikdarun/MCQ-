@@ -1,16 +1,15 @@
-*** Settings ***
+ *** Settings ***
 Library    SeleniumLibrary
 Resource    ../Resources/General keywords.robot
 Resource    ../Resources/ExamMaster_key.robot
 Resource    ../Resources/EducationSetup_key.robot
 Resource    ../Resources/QuestionDetails_key.robot    
 Resource    ../Resources/ExamSetup_key.robot
-Resource    ../Resources/OnlineExam_key.robot   
+Resource    ../Resources/OnlineExam_key.robot  
 
 
 *** Test Cases ***
-
-Add Exam Mode in Exam Mode Master
+Exam mode master
     Login into the application as Teacher
     Navigate to Exam Mode Master screen
     Add Exam Mode and Verify it    
@@ -50,12 +49,12 @@ Perform Subject lecturer level setup
 Add questions and answers    
     Navigate to question details
     Add questions and verify it
-    logout from the application 
+     
        
-Add exam in Exam setup    
-    Login into the application as Teacher
+Add Exam in Exam setup    
+    
     Navigate to exam setup screen
-    Add exam Verify it
+    Add exam and Verify it
     logout from the application
     
 Verify the Exam by Verifier

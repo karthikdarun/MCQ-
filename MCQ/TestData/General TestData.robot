@@ -1,3 +1,5 @@
+*** Settings ***
+Resource    ExamMaster_data.robot   
 *** Variables ***
 ${Server Url}    http://muthucsm-001-site10.btempurl.com/
 ${Superadmin username}    superadmin
@@ -10,6 +12,6 @@ ${Verifier Username}    verifier_001
 ${Verifier Password}    Verifier_001@12
 ${Approver Username}    approver_001
 ${Approver Password}    Approver_001@12
-${Student username}    student19 
+${Student username}    ${StudentLoginName_data} 
 ${Student Password}    Student!1 
 ${Timeout}    3  

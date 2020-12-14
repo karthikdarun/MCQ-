@@ -62,13 +62,14 @@ Perform Subject level setup and verify it
         
 
 Navigate to Subject lecturer level setup
+    Sleep    ${timeout}
     Click Element    ${SubjectlecturerLevelSetup_menu}    
     Sleep    ${timeout}
        
 
 Map subject with lecturer/teacher and verify it
-    Select From List By Label    ${SelectBatchYear_loc}    ${SelectBatchYear_data}
-    Select From List By Label    ${SelectExamLevel_loc}    ${SelectExamLevel_data}
+    Select From List By Label    ${SelectBatchYearTeacherLevel_loc}    ${SelectBatchYear_data}
+    Select From List By Label    ${SelectExamLevelTeacherLevelSetup_loc}    ${SelectExamLevel_data}
     Sleep    ${timeout}
     Click Element    ${SearchTeacherbn}
     Sleep    ${timeout}
@@ -80,7 +81,8 @@ Map subject with lecturer/teacher and verify it
     Click Element    ${SearchLecturerbn}
     Sleep    ${timeout} 
     Click Element    ${SelectLecturerRadiobn}
-    Click Element    ${Submitbutton}
+    Sleep    ${timeout}
+    Click Element    ${LecturerSubmitbutton}
     Select From List By Label    ${SelectSubjectList_loc}    ${SelectSubjectList_data}
     Click Element    ${UpdateLecturersetupbn}
     Click Element    ${YesButton}    

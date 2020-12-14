@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 Resource    ../Locators/General Locators.robot
 Resource    ../TestData/General TestData.robot
 Resource    ../Locators/QuestionDetails_loc.robot
-Resource    ../TestData/QuestionDetails_data.robot
+Resource    ../TestData/EducationSetup_data.robot
 
 *** Keywords ***
 Navigate to question details

@@ -4,10 +4,7 @@ Resource    ../Locators/General Locators.robot
 Resource    ../TestData/General TestData.robot
 Resource    ../Locators/ExamMaster_loc.robot
 Resource    ../TestData/ExamMaster_data.robot
-Library    Collections    
-
-
-
+Library    Collections  
 
 *** Keywords ***
 Navigate to Education level
@@ -114,7 +111,12 @@ Map exam user with student role and verify it
     Click Element    ${RoleUpdatebuttonStudent}
     Click Element    ${YesButton} 
     Sleep    ${timeout}
-    Element Text Should Be    ${SelectedusersStudent_loc}    ${Student1_data}
+    Sleep    3
+    ${userValue}    Get From List    ${userlist}    -1
+    # ${userValues}    Get List Items    ${userlist}
+    # Log To Console    ${userValues}        
+    List Should Contain Value    ${userValue}    ${Student1_data}        
+    # Element Text Should Be    ${SelectedusersStudent_loc}    ${Student1_data}
     
 Navigate to Workflow screen
     Click Element    ${ExamMasterMenu}    

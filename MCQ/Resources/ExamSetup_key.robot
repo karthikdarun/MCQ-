@@ -6,7 +6,7 @@ Resource    ../TestData/ExamSetup_data.robot
 Library    DateTime    
 
 *** Keywords ***
-Add exam Verify it
+Add exam
     
     Click Element    ${ExamSetupAddButton}    
     Sleep    ${MinTimeout}
@@ -15,20 +15,20 @@ Add exam Verify it
     Select From List By Label    ${ExamType_loc}    ${ExamType_data}
     Click Element    ${ExamdateRadioButton_loc}
     
-    ${day}    Get Current Date    result_format=%d
+    ${day}    Get Current Date    result_format=%d-%b-%yyyy
        
-    # Log To Console    ${day}
-    Click Element    ${Examdatepicker_loc} 
+    Log To Console    ${day}
+    # Click Element    ${Examdatepicker_loc} 
     Sleep    ${MaxTimeout}
-    ${day}    Get Current Date    result_format=%d
-    Sleep    ${MinTimeout}    
-    Click Element    xpath://td[@day='${day}']
-        
-    Input Text    ${TotalMarks_loc}    ${TotalMarks_data}
-    Input Text    ${PassMarks_loc}    ${PassMarks_data}    
+    ${date}    Get Current Date    result_format=%d-%b-%Y
+    Input Text    ${ExamDateText_loc}    ${date}    
+    # Click Element    xpath://td[@day='${day}']
+    Sleep    ${MinTimeout}   
+    Input Text    ${TotalMarks_loc}    ${ExamTotalMarks_data}
+    Input Text    ${PassMarks_loc}    ${ExamPassMarks_data}    
     Select From List By Label    ${ExamGrade_loc}    ${ExamGrade_data}
     ${WorkflowCodeName} =    Catenate   SEPARATOR=${SPACE}-${SPACE}    ${WorkFlowCode_data}    ${WorkFlowName_data}
-    Log To Console    ${WorkflowCodeName}     
+    # Log To Console    ${WorkflowCodeName}     
     Select From List By Label    ${ExamSetupWFS_loc}    ${WorkflowCodeName}
     Click Element    ${ExamDurationAuto_loc}       
     Click Element    ${examSaveButton}
@@ -47,7 +47,7 @@ Add exam Verify it
     Click Element    ${ExamSectionAdd_loc}    
     Input Text    ${ExamSectionOrder_loc}    ${ExamSectionOrder_data}    
     Input Text    ${ExamSectionName_loc}    ${ExamSectionName_data}    
-    Input Text    ${TotalQuestions_loc}    ${TotalQuestions_data}    
+    Input Text    ${TotalQuestions_loc}    ${ExamTotalQuestions_data}    
     Input Text    ${ExamSectionTotalMarks_loc}    ${ExamSectionTotalMarks_data}    
     Click Element    ${ExamSectionSaveButton_loc}        
     Click Element    ${YesButton_loc} 
@@ -62,7 +62,7 @@ Add exam Verify it
       
     Click Element    ${ExamSectionGroupAdd}   
     Sleep    ${MinTimeout}
-    Input Text    ${GroupName_loc}    ${GroupName_data}
+    Input Text    ${ExamGroupName_loc}    ${ExamGroupName_data}
     Input Text    ${ExamSecGrpQuestionsFrom_loc}    ${ExamSecGrpQuestionsFrom_data}    
     Input Text    ${ExamSecQuestionsTo_loc}    ${ExamSecQuestionsTo_data}
     Sleep    ${MinTimeout} 
@@ -81,19 +81,19 @@ Add exam Verify it
     Click Element    ${ExamSecQuestionTypeAdd_loc}
     Sleep    ${MinTimeout}
             
-    Select From List By Label    ${SelectSubject_loc}    ${SelectSubject_data} 
+    Select From List By Label    ${ExamSelectSubject_loc}    ${SelectSubject_data} 
     Sleep    ${MinTimeout}   
-    Select From List By Label    ${SelectModule_loc}    ${SelectModule_data}
+    Select From List By Label    ${ExamSelectModule_loc}    ${ExamSelectModule_data}
     Sleep    ${MinTimeout}
-    Select From List By Label    ${SelectTopic_loc}    ${SelectTopic_data}
+    Select From List By Label    ${ExamSelectTopic_loc}    ${ExamSelectTopic_data}
     Sleep    ${MinTimeout}
-    Select From List By Label    ${SelectObjective_loc}    ${SelectObjective_data}
-    Wait Until Element Is Visible    ${SelectquestionLevel_loc}    
-    Select From List By Label    ${SelectquestionLevel_loc}    ${SelectquestionLevel_data}
-    Wait Until Element Is Visible    ${SelectComplexity_loc}     
-    Select From List By Label    ${SelectComplexity_loc}    ${SelectComplexity_data}
+    Select From List By Label    ${ExamSelectObjective_loc}    ${ExamSelectObjective_data}
+    Wait Until Element Is Visible    ${ExamSelectquestionLevel_loc}    
+    Select From List By Label    ${ExamSelectquestionLevel_loc}    ${ExamSelectquestionLevel_data}
+    Wait Until Element Is Visible    ${ExamSelectComplexity_loc}     
+    Select From List By Label    ${ExamSelectComplexity_loc}    ${ExamSelectComplexity_data}
     Sleep    ${MinTimeout}    
-    Input Text    ${QuestionsTypeQuestionsFrom_loc}    ${QuestionsTypeQuestionsFrom_data}
+    Input Text    ${ExamQuestionsTypeQuestionsFrom_loc}    ${QuestionsTypeQuestionsFrom_data}
     Input Text    ${QestionsTypeQuestionsTo_loc}    ${QestionsTypeQuestionsTo_data}    
     Click Element    ${QuestionsTypeQuestionCount_loc}
     Sleep    ${MinTimeout}
@@ -116,9 +116,9 @@ Add exam Verify it
     Clear Element Text    ${PassmarkTextbox_loc}
     Input Text    ${PassmarkTextbox_loc}    ${PassmarkTextbox_data}    
     Sleep    ${MinTimeout}
-    Click Element    ${Updatebutton}    
+    Click Element    ${ExamUpdatebutton}    
     Sleep    ${MinTimeout}
-    Click Element    ${SubmitButton} 
+    Click Element    ${ExamSubmitButton} 
     Click Element    ${YesButton_loc}
     Sleep    ${MaxTimeout}    
       
